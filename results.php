@@ -13,7 +13,10 @@ $data = array
     )
 
   );
-die(var_dump($data));
+// die(var_dump($data));
+foreach ($data as $term) {
+  echo '<a href="' . $term['url'] . '">' . $term['text'] . '</a><br>';
+}
 
 require 'partials/header.php';
 require 'partials/navigation.php';

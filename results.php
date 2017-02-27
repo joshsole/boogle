@@ -2,19 +2,23 @@
 
 $searchQuery = $_GET['q'];
 
-$cars = array
-  (
-  array("Volvo",22,18),
-  array("BMW",15,13),
-  array("Saab",5,2),
-  array("Land Rover",17,15)
+$data = array
+(
+  array(
+    'text'=>'Apple',
+    'url'=> 'http://apple.com'),
+  array(
+'text'=>'Bakers Delight',
+'url'=>'http://bakersdelight.co.nz'
+    )
+
   );
-  die(var_dump($cars));
+die(var_dump($data));
 
 require 'partials/header.php';
 require 'partials/navigation.php';
 ?>
-  
+
 
 <!-- Content -->
 <div class="container">

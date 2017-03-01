@@ -1,5 +1,16 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+
+
+// if (!empty($errors)) {
+//     var_dump($errors);
+// }
+
+include 'partials/header.php'; ?>
+
+
+
+
 
 <h1>
 	<a href="index.php">
@@ -18,25 +29,25 @@
 
 					<div class="col-xs-12 col-md-4">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Full name" name="name" required>
+							<input value="<?= !empty($name) ? $name : '' ?>" type="text" class="form-control" placeholder="Full name" name="name" ><span class="text-danger"><?= !empty($errors['name']) ? $errors['name'] : '' ?> </span>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-md-4">
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email address" name="email" required>
+							<input value="<?= !empty($email) ? $email : '' ?>" type="email" class="form-control" placeholder="Email address" name="email" ><span class="text-danger"><?= !empty($errors['email']) ? $errors['email'] : '' ?> </span>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-md-4">
 						<div class="form-group">
-							<input type="tel" class="form-control" placeholder="Phone number" name="phone" required>
+							<input value="<?= !empty($phone) ? $phone : '' ?>" type="tel" class="form-control" placeholder="Phone number" name="phone" ><span class="text-danger"><?= !empty($errors['phone']) ? $errors['phone'] : '' ?> </span>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-md-12">
 						<div class="form-group">
-							<textarea class="form-control" rows="10" name="feedback" placeholder="Type your message here"></textarea>
+							<textarea value="<?= !empty($phone) ? $phone : '' ?>" class="form-control" rows="10" name="feedback" placeholder="Type your message here"></textarea><span class="text-danger"><?= !empty($errors['phone']) ? $errors['phone'] : '' ?> </span>
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-4">
